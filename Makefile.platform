@@ -1,0 +1,6 @@
+IMPERAS_HOME := $(shell getpath.exe "$(IMPERAS_HOME)")
+
+NOVLNV=1
+SRC=OVPsim_FreeRTOS_ROSH_arm_CortexM3_AMP_xN.c
+
+include $(IMPERAS_HOME)/ImperasLib/buildutils/Makefile.platform

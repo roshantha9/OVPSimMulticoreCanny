@@ -1,0 +1,18 @@
+
+single:
+	@ $(MAKE) -f Makefile.FreeRTOS CORENUM=1
+	#@ $(MAKE) -f Makefile.FreeRTOS_2
+
+
+all_elfs:
+	number=0 ; while [[ $$number -le 3 ]] ; do \
+        echo $$number ; \
+		$(MAKE) -f Makefile.FreeRTOS CORENUM=$$number || break ; \
+        ((number = number + 1)) ; \
+    done
+	
+clean:
+	@ $(MAKE) -f Makefile.FreeRTOS clean
+	@ $(MAKE) -f Makefile.FreeRTOS clean_elfs
+
+	

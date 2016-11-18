@@ -1,0 +1,94 @@
+IMPERAS_HOME := $(shell getpath.exe "$(IMPERAS_HOME)")
+include $(IMPERAS_HOME)/bin/Makefile.include
+
+# Build locally without using a VLNV library
+NOVLNV=1
+
+OPTIMISATION?=-O0 -g -gdwarf-2
+#OPTIMISATION?=-O1
+
+FREERTOS_ROOT?=FreeRTOSV7.1.1
+
+IMPERAS_ERROR := $(if $(wildcard $(FREERTOS_ROOT)*),, $(error "ERROR: Please set FREERTOS_ROOT to FreeRTOSV7.1.1 Source installation root."))
+
+CROSS=ARM_CORTEX_M3
+
+APP=FreeRTOSDemo_$(CORENUM)
+APPELF=$(APP).$(CROSS).elf
+APPELFOD=$(APP).$(CROSS).od
+
+
+FREERTOS_SOURCE=$(FREERTOS_ROOT)/Source
+FREERTOS_DEMO_COMMON=$(FREERTOS_ROOT)/Demo/Common
+
+
+CSRC=$(wildcard Application/*.c)               \
+        $(wildcard BoardSupportPackage/*.c)
+
+PCSRC=$(wildcard $(FREERTOS_SOURCE)/*.c)                      \
+      $(wildcard $(FREERTOS_SOURCE)/portable/MemMang/heap_4.c)     \
+      $(wildcard $(FREERTOS_SOURCE)/portable/GCC/ARM_CM3/port.c) \
+      $(wildcard $(FREERTOS_DEMO_COMMON)/Minimal/crflash.c)
+
+SSRC=$(wildcard Application/*.s)
+
+APPSRC=$(CAPPSRC) $(SAPPSRC)
+
+APPOBJ=$(patsubst $(FREERTOS_ROOT)/%.c,Build/obj/%.o,$(PCSRC)) \
+       $(patsubst $(FREERTOS_ROOT)/%.s,Build/obj/%.o,$(PSSRC)) \
+       $(patsubst %.c,Build/obj/%.o,$(CSRC)) \
+       $(patsubst %.s,Build/obj/%.o,$(SSRC))
+
+
+APPINCLUDE=-I. -IApplication -IBoardSupportPackage \
+           -I$(FREERTOS_SOURCE)/include \
+           -I$(FREERTOS_SOURCE)/portable/GCC/ARM_CM3 \
+           -I$(FREERTOS_DEMO_COMMON)/include
+		   
+        
+ENTRY_RTOSDemo=ResetISR
+CFLAGS+=-D inline= --entry $(ENTRY_RTOSDemo)
+
+APPDBG=-g -gdwarf-2
+APPOPT=-O2 $(APPDBG)
+
+$(CROSS)_LINKER_SCRIPT=-T standalone.ld
+#$(CROSS)_LINKER_SCRIPT=-T generic-m-hosted.ld
+-include $(IMPERAS_HOME)/lib/$(IMPERAS_ARCH)/CrossCompiler/$(CROSS).makefile.include
+
+all: $(APPELF)
+
+$(APPELF): $(APPOBJ)
+	@    echo "# Linking $@ from $^"
+	$(V) mkdir -p $(dir $@)
+	$(V) mkdir -p ELF
+	$(V) $(ARM_CORTEX_M3_LINK) -o $@ $^ $(ARM_CORTEX_M3_LDFLAGS) -lm $(APPDBG)
+	$(V) mv $(APPELF) ELF/$(APPELF)
+	
+Build/obj/%.o: $(FREERTOS_ROOT)/%.c
+	@    echo "# Compiling $< to $@"
+	$(V) mkdir -p $(dir $@)
+	$(V) $(ARM_CORTEX_M3_CC) $(APPINCLUDE) -c -o $@ $< $(APPOPT)
+
+Build/obj/%.o: $(FREERTOS_ROOT)/%.s
+	@    echo "# Assembling $< to $@"
+	$(V) mkdir -p $(dir $@)
+	$(V) $(ARM_CORTEX_M3_AS) $(APPINCLUDE) -o $@ $<  $(APPDBG)
+
+Build/obj/%.o: %.c
+	@    echo "# Compiling $< to $@"
+	$(V) mkdir -p $(dir $@)
+	$(V) $(ARM_CORTEX_M3_CC) $(APPINCLUDE) -c -o $@ $< $(APPOPT)
+
+Build/obj/%.o: %.s
+	@    echo "# Assembling $< to $@"
+	$(V) mkdir -p $(dir $@)
+	$(V) $(ARM_CORTEX_M3_AS) $(APPINCLUDE) -o $@ $< $(APPDBG)
+
+clean_elfs:
+	- rm ELF/*
+	
+clean::
+	- rm -f $(APPOBJ) $(APPELF) $(APPELFOD) 
+	- rm -rf Build
+
