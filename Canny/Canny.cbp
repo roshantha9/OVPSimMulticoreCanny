@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Canny" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Canny" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../Application/ParTest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Application/canny.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Application/canny.h" />
+		<Unit filename="../Application/img_split_2x2rand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Application/img_split_2x2rand.h" />
+		<Unit filename="../Application/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Application/roshTest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Application/roshTest.h" />
+		<Unit filename="../Application/roshTest2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Application/roshTest2.h" />
+		<Unit filename="../Application/startup.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Application/stubs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Application/synch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../BoardSupportPackage/bsp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../BoardSupportPackage/bsp.h" />
+		<Unit filename="../FreeRTOSConfig.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/Minimal/crflash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/AltBlckQ.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/AltBlock.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/AltPollQ.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/AltQTest.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/BlockQ.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/GenQTest.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/IntQueue.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/PollQ.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/QPeek.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/TimerDemo.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/blocktim.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/comtest.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/comtest2.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/comtest_strings.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/countsem.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/crflash.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/crhook.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/death.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/dynamic.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/fileIO.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/flash.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/flash_timer.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/flop.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/integer.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/mevents.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/partest.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/print.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/recmutex.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/semtest.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Demo/Common/include/serial.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/croutine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/FreeRTOS.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/StackMacros.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/croutine.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/list.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/mpu_wrappers.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/portable.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/projdefs.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/queue.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/semphr.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/task.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/include/timers.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../FreeRTOSV7.1.1/Source/portable/GCC/ARM_CM3/port.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../FreeRTOSV7.1.1/Source/portable/GCC/ARM_CM3/portmacro.h" />
+		<Unit filename="../FreeRTOSV7.1.1/Source/portable/MemMang/heap_1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../FreeRTOSV7.1.1/Source/queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../FreeRTOSV7.1.1/Source/tasks.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../FreeRTOSV7.1.1/Source/timers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../OVPsim_FreeRTOS_ROSH_arm_CortexM3_AMP_xN.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../generic-hosted.ld" />
+		<Unit filename="../generic-m-hosted.ld" />
+		<Unit filename="../standalone.ld" />
+		<Unit filename="../standalone2.ld" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

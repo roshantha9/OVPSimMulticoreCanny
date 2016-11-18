@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="..\FreeRTOSV7.1.1\Source\tasks.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8353" topLine="213" />
+		</Cursor>
+	</File>
+	<File name="..\FreeRTOSConfig.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5656" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\OVPsim_FreeRTOS_ROSH_arm_CortexM3_AMP_xN.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10146" topLine="209" />
+		</Cursor>
+	</File>
+	<File name="..\FreeRTOSV7.1.1\Source\include\FreeRTOS.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="61" />
+		</Cursor>
+	</File>
+	<File name="..\FreeRTOSV7.1.1\Source\include\mpu_wrappers.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="107" />
+		</Cursor>
+	</File>
+	<File name="..\FreeRTOSV7.1.1\Source\include\portable.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4826" topLine="59" />
+		</Cursor>
+	</File>
+	<File name="..\Application\img_split_2x2rand.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6842" topLine="642" />
+		</Cursor>
+	</File>
+	<File name="..\Application\roshTest.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="596" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="..\Application\img_split_2x2rand.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1495" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\Application\main.c" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7928" topLine="175" />
+		</Cursor>
+	</File>
+	<File name="..\Application\roshTest2.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="871" topLine="11" />
+		</Cursor>
+	</File>
+	<File name="..\Application\roshTest2.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="275" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\Application\canny.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9984" topLine="313" />
+		</Cursor>
+		<Folding>
+			<Collapse line="641" />
+		</Folding>
+	</File>
+	<File name="..\Application\startup.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1063" topLine="14" />
+		</Cursor>
+	</File>
+	<File name="..\Application\canny.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2414" topLine="64" />
+		</Cursor>
+	</File>
+	<File name="..\FreeRTOSV7.1.1\Source\portable\GCC\ARM_CM3\portmacro.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5743" topLine="78" />
+		</Cursor>
+	</File>
+	<File name="..\FreeRTOSV7.1.1\Source\portable\MemMang\heap_1.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6904" topLine="130" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
