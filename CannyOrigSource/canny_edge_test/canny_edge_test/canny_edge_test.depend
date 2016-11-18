@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1386089247 source:c:\users\rosh\documents\ovpsim\imperas\demo\ovpsim_freertos_canny_arm_cortexm3_amp_xn\cannyorigsource\canny_edge_test\canny_edge_test\main.c
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+	<math.h>
+	<string.h>
+	<stdbool.h>
+	<assert.h>
+
